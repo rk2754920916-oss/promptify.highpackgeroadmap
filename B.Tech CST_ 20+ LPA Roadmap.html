@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B.Tech CST: 20+ LPA Roadmap (4 Year, 8 Semester)</title>
+<style>
+:root{--bg:#f3f6fb;--ink:#14213d;--mut:#55627d;--card:#fff;--line:#d5deee;--acc:#1d4ed8;--hi:#f59e0b;--ok:#15803d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1424;--ink:#e8edf8;--mut:#9aa8c7;--card:#151f36;--line:#27345a;--acc:#6ea0ff;--hi:#fbbf24;--ok:#4ade80}}
+:root[data-theme="dark"]{--bg:#0d1424;--ink:#e8edf8;--mut:#9aa8c7;--card:#151f36;--line:#27345a;--acc:#6ea0ff;--hi:#fbbf24;--ok:#4ade80}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:clamp(1.9rem,6vw,3rem);line-height:1.1;margin:.4em 0 .3em;letter-spacing:-.02em}
+.sub{color:var(--mut);max-width:60ch;margin:0 0 18px}
+.goal{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.goal div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--hi);padding:8px 14px;border-radius:6px}
+.goal b{display:block;font-size:1.15rem}
+.goal span{color:var(--mut);font-size:.85rem}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.pl{font-size:.85rem;color:var(--mut);margin-bottom:18px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:5}
+.tabs button{font:inherit;font-weight:600;padding:10px 4px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+button:focus-visible,input:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.theme{font:inherit;float:right;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:4px 12px;cursor:pointer;font-size:.85rem}
+.yh{margin:4px 0 14px}
+.yh h2{margin:0;font-size:1.5rem}
+.yh p{margin:2px 0 0;color:var(--mut)}
+.sem{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
+.sem h3{margin:0 0 2px;font-size:1.15rem}
+.focus{color:var(--acc);font-weight:600;margin:0 0 10px}
+.sem h4{margin:12px 0 4px;font-size:.95rem}
+ul{list-style:none;margin:0;padding:0}
+li label{display:flex;gap:10px;align-items:flex-start;padding:4px 0;cursor:pointer}
+li input{margin-top:6px;width:18px;height:18px;flex:none;accent-color:var(--ok)}
+li input:checked+span{text-decoration:line-through;color:var(--mut)}
+.proj{border-left:3px solid var(--hi);padding:4px 12px;margin-top:10px;background:rgba(245,158,11,.08)}
+.sec{margin-top:30px}
+.sec h2{font-size:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.box h3{margin:0 0 6px;font-size:1rem}
+.box p,.box li{font-size:.92rem;margin:0}
+.box li{padding:2px 0}
+.note{font-size:.85rem;color:var(--mut);margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<button class="theme" id="th" type="button">Dark / Light</button>
+<h1>B.Tech CST: 20+ LPA Roadmap</h1>
+<p class="sub">4 saal, 8 semester. Har semester ka clear focus, kya seekhna hai, kya banana hai. Tick karte jao, progress save hota rahega.</p>
+<div class="goal">
+<div><b>20+ LPA</b><span>Target package</span></div>
+<div><b>400+</b><span>DSA problems</span></div>
+<div><b>5</b><span>Strong projects</span></div>
+<div><b>2</b><span>Internships</span></div>
+</div>
+<div class="bar"><i id="pb"></i></div>
+<div class="pl" id="pt">0% complete</div>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="view"></div>
+
+<div class="sec">
+<h2>20+ LPA ke liye 4 pillars</h2>
+<div class="grid">
+<div class="box"><h3>1. DSA + Problem Solving</h3><p>Product companies ka pehla filter. LeetCode, Codeforces ya GFG par roz 1-2 problems. Target: 400+ solved, 5-6 contests per year.</p></div>
+<div class="box"><h3>2. Core CS</h3><p>OS, DBMS, CN, OOPs aur System Design basics. Interview mein yahi poochha jata hai.</p></div>
+<div class="box"><h3>3. Projects + Internship</h3><p>Deployed projects with real users. Ek internship minimum, do ho to behtar. Resume ka sabse strong hissa.</p></div>
+<div class="box"><h3>4. Profile + Network</h3><p>GitHub, LinkedIn, resume, referrals. Open source ya hackathon se naam banta hai.</p></div>
+</div>
+</div>
+
+<div class="sec">
+<h2>Kaun si companies 20+ LPA deti hain</h2>
+<div class="grid">
+<div class="box"><h3>Product-based</h3><ul><li>Google, Microsoft, Amazon, Adobe</li><li>Atlassian, Uber, Flipkart, Walmart</li><li>PhonePe, Razorpay, CRED, Zomato</li></ul></div>
+<div class="box"><h3>Quant / Trading</h3><ul><li>Tower, Jane Street, Optiver</li><li>Graviton, Quadeye</li><li>Strong math + DSA chahiye</li></ul></div>
+<div class="box"><h3>Off-campus route</h3><ul><li>Referral + resume + OA</li><li>Startups (funded) with ESOPs</li><li>Internship se PPO</li></ul></div>
+</div>
+</div>
+
+<p class="note">Note: Syllabus university ke hisaab se thoda alag ho sakta hai (WBUT/MAKAUT, AKTU, etc.). Yeh roadmap skills par based hai, subject names par nahi. Package kisi ko guarantee nahi hota; consistency, projects aur interview prep se chances kaafi badhte hain.</p>
+</div>
+
+<script>
+var Y=[
+{n:"Year 1",t:"Foundation: coding aur logic pakka karo",s:[
+{n:"Semester 1",f:"Programming ki neev",
+ a:["C programming: loops, arrays, pointers, functions","Maths-1 aur Physics/Chemistry ke marks maintain karo (CGPA 8.5+)","Laptop setup: VS Code, Git, GitHub account","Typing speed aur English communication par kaam"],
+ b:["Roz 1 ghanta coding practice (HackerRank / CodeChef beginner)","Binary, number systems, basic logic puzzles"],
+ p:"Mini project: Calculator ya Number Guessing game (C)"},
+{n:"Semester 2",f:"Python + OOP + DSA shuruaat",
+ a:["Python basics se advanced tak (list, dict, file handling)","C++ ya Java basics + OOP concepts","Arrays, strings, recursion, sorting, searching","Digital Electronics, Maths-2 (discrete maths ki neev)"],
+ b:["LeetCode: 50 Easy problems","Git + GitHub ka daily use","College ke coding club ya tech society join karo"],
+ p:"Project: Student Management System (Python/C++) GitHub par upload"}]},
+{n:"Year 2",t:"Core CS: DSA aur web development",s:[
+{n:"Semester 3",f:"DSA seriously + web basics",
+ a:["Data Structures: linked list, stack, queue, trees, heaps","Hashing, two pointers, sliding window, binary search","HTML, CSS, JavaScript (responsive pages banana seekho)","Computer Organization, Discrete Maths"],
+ b:["LeetCode: 150 problems (Easy + Medium)","Codeforces / CodeChef contests start karo","Resume ka pehla version"],
+ p:"Project: Personal portfolio website, deploy on Vercel/GitHub Pages"},
+{n:"Semester 4",f:"Algorithms + core subjects",
+ a:["Graphs (BFS/DFS, Dijkstra), DP basics, greedy, backtracking","DBMS + SQL (joins, indexing, normalization)","Operating Systems: process, threads, scheduling, deadlock","Design & Analysis of Algorithms, OOP deep dive"],
+ b:["LeetCode: 250 problems total","Summer: internship ya open source apply shuru","LinkedIn profile banao, seniors se connect karo"],
+ p:"Project: Full-stack app v1 (React + Node/Express + MySQL/MongoDB)"}]},
+{n:"Year 3",t:"Specialization: projects, internship, interview prep",s:[
+{n:"Semester 5",f:"Full stack + Computer Networks",
+ a:["React/Next.js, Node.js, REST APIs, authentication (JWT)","Computer Networks: TCP/IP, HTTP, DNS, sockets","Compiler Design / Theory of Computation (university ke hisaab se)","DP advanced, tries, segment tree basics"],
+ b:["LeetCode: 320+ problems, weekly contests","Summer internship ke liye 50+ applications (referral se)","Hackathon mein participate karo"],
+ p:"Project: Real-world app (booking, e-commerce ya ed-tech) with payments, admin panel, deployed with users"},
+{n:"Semester 6",f:"Internship + System Design",
+ a:["System Design basics: load balancer, caching, DB sharding, queues","Cloud basics: AWS/GCP, Docker, CI/CD","Software Engineering, Operating Systems revision","Ek specialization chuno: Backend, AI/ML, ya DevOps"],
+ b:["Summer internship complete (2-3 mahine) aur PPO ka try","LeetCode: 400+ problems, rating 1600+ (Codeforces) ya LC rating 1700+","Core CS notes: OS, DBMS, CN ke interview questions"],
+ p:"Project: Specialization project (e.g. ML model with API, ya scalable backend with Docker)"}]},
+{n:"Year 4",t:"Placement season: crack karo 20+ LPA",s:[
+{n:"Semester 7",f:"Placement mode ON",
+ a:["Mock interviews: DSA + system design (Pramp, friends, seniors)","Resume 1 page, ATS-friendly, 2-3 strong projects","Aptitude + OA practice (HackerRank, CodeSignal style)","Company-wise question lists (Amazon, Microsoft, Adobe etc.)"],
+ b:["On-campus + off-campus dono apply karo","Referrals: LinkedIn par alumni ko polite message","Weekly: 1 mock interview, 2 contests, 10 problems"],
+ p:"Capstone/Major project: polished, documented, live demo ready"},
+{n:"Semester 8",f:"Offer, negotiate, join",
+ a:["Offers compare karo: base, bonus, ESOPs, growth","Final project aur viva","Low-level design (LLD) aur behavioral round prep","Agar offer nahi mila: off-campus drives, startups, referrals"],
+ b:["Offer ke baad bhi coding practice jaari rakho","Joining se pehle tech stack revise karo","Seniors ko mentor karo, apna network banao"],
+ p:"Goal: 20+ LPA offer (ya PPO) in hand"}]}
+];
+var K="cst20-v1",st={},cur=0;
+try{st=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){st={}}
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+function total(){var n=0,d=0;Y.forEach(function(y,yi){y.s.forEach(function(s,si){s.a.concat(s.b).forEach(function(_,i){n++;if(st[yi+"-"+si+"-"+i])d++})})});return[d,n]}
+function prog(){var t=total(),p=Math.round(t[0]/t[1]*100);document.getElementById("pb").style.width=p+"%";document.getElementById("pt").textContent=p+"% complete ("+t[0]+"/"+t[1]+" tasks)"}
+function render(){
+ var y=Y[cur],h='<div class="yh"><h2>'+y.n+'</h2><p>'+y.t+'</p></div>';
+ y.s.forEach(function(s,si){
+  var all=s.a.concat(s.b);
+  function li(arr,off){return arr.map(function(x,i){var k=cur+"-"+si+"-"+(i+off);return '<li><label><input type="checkbox" data-k="'+k+'"'+(st[k]?' checked':'')+'><span>'+x+'</span></label></li>'}).join("")}
+  h+='<div class="sem"><h3>'+s.n+'</h3><p class="focus">'+s.f+'</p><h4>Seekhna hai</h4><ul>'+li(s.a,0)+'</ul><h4>Practice aur career</h4><ul>'+li(s.b,s.a.length)+'</ul><div class="proj"><b>Project:</b> '+s.p.replace(/^(Mini project|Project|Capstone\/Major project|Goal): /,"")+'</div></div>';
+ });
+ document.getElementById("view").innerHTML=h;
+ document.querySelectorAll("#view input").forEach(function(c){c.onchange=function(){st[c.dataset.k]=c.checked;save();prog()}});
+ document.querySelectorAll("#tabs button").forEach(function(b,i){b.setAttribute("aria-selected",i===cur)});
+}
+var tb=document.getElementById("tabs");
+Y.forEach(function(y,i){var b=document.createElement("button");b.type="button";b.setAttribute("role","tab");b.textContent=y.n;b.onclick=function(){cur=i;render()};tb.appendChild(b)});
+document.getElementById("th").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme");var dark=d?d==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.setAttribute("data-theme",dark?"light":"dark")};
+render();prog();
+</script>
+</body>
+</html>
